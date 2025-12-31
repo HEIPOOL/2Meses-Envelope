@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Meses de Namoro - Para Lívia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♥</text></svg>">
+    <style>
+        :root {
+            /* Cores do pôr do sol */
+            --color-sunset1: #FFB75E;
+            --color-sunset2: #FF7A7A;
+            --color-sunset3: #FF5E9E;
+            --color-sunset4: #6A51FF;
+            
+            /* Cores translúcidas */
+            --color-sunset1-translucent: rgba(255, 183, 94, 0.15);
+            --color-sunset2-translucent: rgba(255, 122, 122, 0.15);
+            --color-sunset3-translucent: rgba(255, 94, 158, 0.15);
+            --color-sunset4-translucent: rgba(106, 81, 255, 0.15);
+            
+            /* Tipografia */
+            --font-serif: 'Cinzel', serif;
+            --font-sans: 'Inter', sans-serif;
+            
+            /* Espaçamentos */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            
+            /* Sombras */
+            --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --shadow-strong: 0 12px 36px rgba(0, 0, 0, 0.2);
+            
+            /* Transições */
+            --transition-fast: 0.3s ease;
+            --transition-medium: 0.6s ease;
+            --transition-slow: 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: #fff;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, var(--color-sunset1) 0%, var(--color-sunset2) 30%, var(--color-sunset3) 60%, var(--color-sunset4) 85%);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-md);
+            position: relative;
+        }
+        
+        /* Textura de fundo sutil */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23000000' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.4;
+            z-index: -1;
+        }
+        
+        /* Animações de fundo */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes walk {
+            0% { transform: translateX(-100px) rotateY(0deg); }
+            49% { transform: translateX(calc(100vw + 100px)) rotateY(0deg); }
+            50% { transform: translateX(calc(100vw + 100px)) rotateY(180deg); }
+            99% { transform: translateX(-100px) rotateY(180deg); }
+            100% { transform: translateX(-100px) rotateY(0deg); }
+        }
+        
+        @keyframes walkVertical {
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(calc(100vh + 100px)); }
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+        
+        @keyframes confettiFall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        /* Container principal */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Estado inicial: envelope fechado */
+        .envelope-closed {
+            width: 90%;
+            max-width: 800px;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: var(--shadow-strong);
+            padding: var(--space-xl) var(--space-lg);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+        
+        /* Efeito de envelope fechado */
+        .envelope-closed::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            z-index: 1;
+        }
+        
+        .envelope-closed::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 12px 12px;
+        }
+        
+        .logo {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .logo span {
+            color: #ffeb3b;
+            font-size: 1.2em;
+        }
+        
+        .name {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            z-index: 2;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        .name::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.5);
+            margin: var(--space-sm) auto;
+            border-radius: 2px;
+        }
+        
+        /* Botão principal */
+        .cta-button {
+            position: relative;
+            padding: var(--space-md) var(--space-xl);
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-family: var(--font-serif);
+            font-weight: 600;
+            color: #333;
+            background: linear-gradient(135deg, #FFEB3B, #FF9800);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all var(--transition-fast);
+            z-index: 2;
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+            min-width: 250px;
+            max-width: 100%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 152, 0, 0.6);
+        }
+        
+        .cta-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+        }
+        
+        /* Efeito ripple no botão */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        /* Estado aberto: envelope revelado */
+        .envelope-opened {
+            width: 90%;
+            max-width: 900px;
+            min-height: 80vh;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            box-shadow: var(--shadow-strong);
+            padding: var(--space-xl) var(--space-lg);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+        }
+        
+        .envelope-opened::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            z-index: -1;
+        }
+        
+        /* Conteúdo revelado */
+        .revealed-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.5s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .poem-container {
+            width: 100%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+            box-shadow: var(--shadow-subtle);
+            border-left: 5px solid var(--color-sunset3);
+            color: #333;
+        }
+        
+        .poem-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--color-sunset4);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+        }
+        
+        .poem {
+            font-family: var(--font-serif);
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: var(--space-lg);
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .poem-signature {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-sunset2);
+            text-align: right;
+            margin-top: var(--space-lg);
+            border-top: 1px solid rgba(106, 81, 255, 0.2);
+            padding-top: var(--space-sm);
+        }
+        
+        .rimbaud-container {
+            width: 100%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            box-shadow: var(--shadow-subtle);
+            border-right: 5px solid var(--color-sunset2);
+            color: #333;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.8s;
+        }
+        
+        .rimbaud-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: 600;
+            color: var(--color-sunset2);
+            margin-bottom: var(--space-md);
+            text-align: center;
+        }
+        
+        .rimbaud-poem {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .rimbaud-signature {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-sunset2);
+            text-align: right;
+            margin-top: var(--space-md);
+            border-top: 1px solid rgba(255, 122, 122, 0.2);
+            padding-top: var(--space-sm);
+        }
+        
+        /* Botões na view aberta */
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-md);
+            width: 100%;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 1.1s;
+        }
+        
+        .secondary-button {
+            padding: var(--space-sm) var(--space-lg);
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .secondary-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Link da galeria */
+        .gallery-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        /* Ratinhos SVG */
+        .mouse {
+            position: absolute;
+            z-index: 5;
+            pointer-events: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+        }
+        
+        .mouse:hover {
+            transform: scale(1.2);
+            z-index: 100;
+        }
+        
+        .mouse-tooltip {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .mouse-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+        }
+        
+        /* Partículas e confetes */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 20;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            pointer-events: none;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Mensagem de carregamento */
+        .loading-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .loading-message.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .loading-content {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: 16px;
+            text-align: center;
+            max-width: 500px;
+            margin: var(--space-md);
+            box-shadow: var(--shadow-strong);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .loading-message.active .loading-content {
+            transform: translateY(0);
+        }
+        
+        .loading-content h3 {
+            font-family: var(--font-serif);
+            color: var(--color-sunset4);
+            margin-bottom: var(--space-md);
+        }
+        
+        .loading-content p {
+            color: #333;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--color-sunset1-translucent);
+            border-top-color: var(--color-sunset3);
+            border-radius: 50%;
+            animation: spinner 1s linear infinite;
+            margin: 0 auto var(--space-md);
+        }
+        
+        @keyframes spinner {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .envelope-closed, .envelope-opened {
+                width: 95%;
+                padding: var(--space-lg) var(--space-md);
+            }
+            
+            .poem-container, .rimbaud-container {
+                padding: var(--space-lg) var(--space-md);
+            }
+            
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .secondary-button, .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: var(--space-sm);
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .name {
+                font-size: 2.8rem;
+            }
+            
+            .cta-button {
+                min-width: 200px;
+                padding: var(--space-sm) var(--space-lg);
+            }
+        }
+        
+        /* Preferência por movimento reduzido */
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .envelope-closed, .envelope-opened {
+                transition: none;
+            }
+        }
+        
+        /* Acessibilidade - foco */
+        button:focus, .cta-button:focus, .secondary-button:focus {
+            outline: 3px solid rgba(255, 255, 255, 0.8);
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Envelope fechado (estado inicial) -->
+        <div class="envelope-closed" id="envelopeClosed">
+            <div class="logo">2 meses <span>♥</span></div>
+            <h1 class="name">Lívia</h1>
+            <button class="cta-button" id="mainButton">Abrir Surpresa</button>
+        </div>
+        
+        <!-- Envelope aberto (revelado após clique) -->
+        <div class="envelope-opened" id="envelopeOpened">
+            <div class="revealed-content">
+                <div class="poem-container">
+                    <h2 class="poem-title">Para Lívia</h2>
+                    <blockquote class="poem">
+                        Lívia, teus olhos guardam o crepúsculo —<br>
+                        dois faróis que acendem caminhos na minha tarde.<br>
+                        Teu sorriso rasga o céu: é promessa, riso e abrigo.<br>
+                        Teu cabelo, fogo morno do pôr do sol, derrama ouro nas minhas manhãs.<br>
+                        Tu és a luz que faz da rotina um instante sagrado;<br>
+                        quando me olhas, o mundo fica mais leve — como se o sol viesse só pra nos tocar.
+                    </blockquote>
+                    <div class="poem-signature">— Heitor</div>
+                </div>
+                
+                <div class="rimbaud-container">
+                    <h3 class="rimbaud-title">Trecho de Rimbaud</h3>
+                    <blockquote class="rimbaud-poem">
+                        Ela foi encontrada!<br>
+                        Quem? A eternidade.<br>
+                        É o mar misturado<br>
+                        Ao sol.<br><br>
+                        Minha alma imortal,<br>
+                        Cumpre a tua jura<br>
+                        Seja o sol estival<br>
+                        Ou a noite pura.
+                    </blockquote>
+                    <div class="rimbaud-signature">— Arthur Rimbaud</div>
+                </div>
+                
+                <div class="buttons-container">
+                    <a href="https://3-meses-liv-hei.vercel.app" class="gallery-link" target="_blank" rel="noopener" id="galleryLink">
+                        <button class="cta-button" id="galleryButton">Ir para a Galeria 3D</button>
+                    </a>
+                    <button class="secondary-button" id="backButton">Voltar ao Envelope</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mensagem de carregamento -->
+    <div class="loading-message" id="loadingMessage">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Preparando a Galeria 3D</h3>
+            <p>Surpresa pra Lívia — com amor, Heitor</p>
+            <p>A galeria está carregando, será redirecionado em instantes...</p>
+            <button class="secondary-button" id="cancelButton">Cancelar</button>
+        </div>
+    </div>
+    
+    <!-- Ratinhos SVG (adicionados via JS) -->
+    <div id="miceContainer"></div>
+    
+    <!-- Partículas e confetes -->
+    <div class="particles-container" id="particlesContainer"></div>
+    
+    <script>
+        // Elementos DOM
+        const envelopeClosed = document.getElementById('envelopeClosed');
+        const envelopeOpened = document.getElementById('envelopeOpened');
+        const mainButton = document.getElementById('mainButton');
+        const galleryButton = document.getElementById('galleryButton');
+        const galleryLink = document.getElementById('galleryLink');
+        const backButton = document.getElementById('backButton');
+        const loadingMessage = document.getElementById('loadingMessage');
+        const cancelButton = document.getElementById('cancelButton');
+        const miceContainer = document.getElementById('miceContainer');
+        const particlesContainer = document.getElementById('particlesContainer');
+        
+        // URL da galeria 3D
+        const GALLERY_URL = 'https://3-meses-liv-hei.vercel.app';
+        
+        // Palavras doces para os ratinhos
+        const sweetWords = [
+            "Amor", "Teu sorriso", "Lívia", "Crepúsculo", "Carinho", 
+            "Eternidade", "Doce", "Felicidade", "Abrigo", "Luz"
+        ];
+        
+        // Estado da aplicação
+        let isEnvelopeOpen = false;
+        let mice = [];
+        let tooltips = [];
+        let isRedirecting = false;
+        
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            // Criar ratinhos
+            createMice();
+            
+            // Configurar eventos
+            setupEventListeners();
+            
+            // Verificar preferência por movimento reduzido
+            checkReducedMotion();
+        });
+        
+        // Criar ratinhos SVG
+        function createMice() {
+            const mouseCount = 8;
+            const mouseSVGs = [
+                // Mouse 1 - Caminhando
+                '<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 5C35 5 40 10 40 15C40 20 35 25 30 25C25 25 20 20 20 15C20 10 25 5 30 5Z" fill="#FFB75E"/><ellipse cx="25" cy="12" rx="3" ry="4" fill="white"/><ellipse cx="35" cy="12" rx="3" ry="4" fill="white"/><ellipse cx="25" cy="12" rx="1.5" ry="2" fill="#333"/><ellipse cx="35" cy="12" rx="1.5" ry="2" fill="#333"/><path d="M30 18Q32 20 28 20" stroke="#FF5E9E" stroke-width="1.5" fill="none"/><path d="M15 25Q25 30 30 35Q35 30 45 25" stroke="#6A51FF" stroke-width="3" fill="none" stroke-linecap="round"/></svg>',
+                
+                // Mouse 2 - Pulando
+                '<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 10C30 10 35 15 35 20C35 25 30 30 25 30C20 30 15 25 15 20C15 15 20 10 25 10Z" fill="#FF7A7A"/><ellipse cx="20" cy="17" rx="3" ry="4" fill="white"/><ellipse cx="30" cy="17" rx="3" ry="4" fill="white"/><ellipse cx="20" cy="17" rx="1.5" ry="2" fill="#333"/><ellipse cx="30" cy="17" rx="1.5" ry="2" fill="#333"/><path d="M25 23Q27 25 23 25" stroke="#FF5E9E" stroke-width="1.5" fill="none"/><path d="M20 35Q25 40 30 35" stroke="#6A51FF" stroke-width="3" fill="none" stroke-linecap="round"/></svg>',
+                
+                // Mouse 3 - Cochilando
+                '<svg width="55" height="40" viewBox="0 0 55 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27 8C32 8 37 13 37 18C37 23 32 28 27 28C22 28 17 23 17 18C17 13 22 8 27 8Z" fill="#FF5E9E"/><path d="M20 15L24 15L24 19L20 19Z" fill="#333"/><path d="M30 15L34 15L34 19L30 19Z" fill="#333"/><path d="M25 22Q27 24 23 24" stroke="#FF7A7A" stroke-width="1.5" fill="none"/><path d="M15 30Q25 25 27 35Q29 25 39 30" stroke="#6A51FF" stroke-width="3" fill="none" stroke-linecap="round"/></svg>'
+            ];
+            
+            for (let i = 0; i < mouseCount; i++) {
+                const mouse = document.createElement('div');
+                mouse.className = 'mouse';
+                mouse.innerHTML = mouseSVGs[i % mouseSVGs.length];
+                
+                // Posição aleatória
+                const x = Math.random() * 90 + 5; // 5% a 95%
+                const y = Math.random() * 90 + 5;
+                
+                mouse.style.left = `${x}%`;
+                mouse.style.top = `${y}%`;
+                
+                // Tamanho aleatório
+                const size = 40 + Math.random() * 30;
+                mouse.style.width = `${size}px`;
+                mouse.style.height = `${size * 0.7}px`;
+                
+                // Atraso de animação aleatório
+                const delay = Math.random() * 5;
+                
+                // Definir animação baseada na posição
+                if (x < 30) {
+                    // À esquerda: animação vertical
+                    mouse.style.animation = `walkVertical ${15 + Math.random() * 10}s linear infinite ${delay}s`;
+                } else {
+                    // Outras áreas: flutuar
+                    mouse.style.animation = `float ${3 + Math.random() * 4}s ease-in-out infinite ${delay}s`;
+                }
+                
+                // Adicionar tooltip
+                const tooltip = document.createElement('div');
+                tooltip.className = 'mouse-tooltip';
+                tooltip.textContent = sweetWords[i % sweetWords.length];
+                
+                // Adicionar evento para mostrar tooltip
+                mouse.addEventListener('mouseenter', function() {
+                    const rect = mouse.getBoundingClientRect();
+                    tooltip.style.left = `${rect.left + rect.width / 2}px`;
+                    tooltip.style.top = `${rect.top - 10}px`;
+                    tooltip.style.transform = 'translate(-50%, -100%)';
+                    tooltip.style.opacity = '1';
+                    
+                    document.body.appendChild(tooltip);
+                    tooltips.push(tooltip);
+                });
+                
+                mouse.addEventListener('mouseleave', function() {
+                    tooltip.style.opacity = '0';
+                    setTimeout(() => {
+                        if (tooltip.parentNode) {
+                            tooltip.parentNode.removeChild(tooltip);
+                        }
+                    }, 300);
+                });
+                
+                // Adicionar ao container
+                miceContainer.appendChild(mouse);
+                mice.push(mouse);
+            }
+        }
+        
+        // Configurar listeners de eventos
+        function setupEventListeners() {
+            // Botão principal - abrir envelope
+            mainButton.addEventListener('click', openEnvelope);
+            mainButton.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openEnvelope();
+                }
+            });
+            
+            // Botão galeria - redirecionar com efeito
+            galleryButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                goToGalleryWithEffect();
+            });
+            
+            // Link da galeria - também adicionar efeito
+            galleryLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                goToGalleryWithEffect();
+            });
+            
+            // Botão voltar - fechar envelope
+            backButton.addEventListener('click', closeEnvelope);
+            backButton.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    closeEnvelope();
+                }
+            });
+            
+            // Botão cancelar redirecionamento
+            cancelButton.addEventListener('click', function() {
+                loadingMessage.classList.remove('active');
+                isRedirecting = false;
+            });
+            
+            // Efeito ripple nos botões
+            document.querySelectorAll('.cta-button, .secondary-button').forEach(button => {
+                button.addEventListener('click', createRipple);
+            });
+            
+            // Permitir abrir envelope com tecla Enter quando focado
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && document.activeElement === document.body && !isEnvelopeOpen) {
+                    openEnvelope();
+                }
+            });
+        }
+        
+        // Abrir envelope
+        function openEnvelope() {
+            if (isEnvelopeOpen) return;
+            
+            isEnvelopeOpen = true;
+            
+            // Adicionar classe para bloquear scroll temporariamente
+            document.body.style.overflow = 'hidden';
+            
+            // Animação de abertura do envelope
+            envelopeClosed.style.opacity = '0';
+            envelopeClosed.style.transform = 'scale(0.9) translateY(20px)';
+            
+            setTimeout(() => {
+                envelopeClosed.style.display = 'none';
+                envelopeOpened.style.display = 'flex';
+                
+                // Animar a abertura
+                envelopeOpened.style.opacity = '0';
+                envelopeOpened.style.transform = 'scale(0.8)';
+                
+                setTimeout(() => {
+                    envelopeOpened.style.opacity = '1';
+                    envelopeOpened.style.transform = 'scale(1)';
+                    
+                    // Criar partículas e confetes
+                    createParticles();
+                    createConfetti();
+                    
+                    // Animar ratinhos
+                    animateMiceOnOpen();
+                    
+                    // Restaurar scroll após animação
+                    setTimeout(() => {
+                        document.body.style.overflow = 'auto';
+                    }, 1000);
+                }, 50);
+            }, 600);
+            
+            // Atualizar texto do botão principal
+            mainButton.textContent = 'Abrir Surpresa';
+        }
+        
+        // Fechar envelope
+        function closeEnvelope() {
+            if (!isEnvelopeOpen) return;
+            
+            isEnvelopeOpen = false;
+            
+            // Animação de fechamento
+            envelopeOpened.style.opacity = '0';
+            envelopeOpened.style.transform = 'scale(0.9) translateY(20px)';
+            
+            setTimeout(() => {
+                envelopeOpened.style.display = 'none';
+                envelopeClosed.style.display = 'flex';
+                
+                envelopeClosed.style.opacity = '0';
+                envelopeClosed.style.transform = 'scale(0.8)';
+                
+                setTimeout(() => {
+                    envelopeClosed.style.opacity = '1';
+                    envelopeClosed.style.transform = 'scale(1)';
+                }, 50);
+            }, 600);
+            
+            // Limpar tooltips
+            tooltips.forEach(tooltip => {
+                if (tooltip.parentNode) {
+                    tooltip.parentNode.removeChild(tooltip);
+                }
+            });
+            tooltips = [];
+        }
+        
+        // Redirecionar para galeria 3D com efeito
+        function goToGalleryWithEffect() {
+            if (isRedirecting) return;
+            
+            isRedirecting = true;
+            
+            // Mostrar mensagem de carregamento
+            loadingMessage.classList.add('active');
+            
+            // Simular breve carregamento para melhor UX
+            setTimeout(() => {
+                // Redirecionar para a galeria 3D
+                window.open(GALLERY_URL, '_blank');
+                
+                // Fechar mensagem de carregamento após um tempo
+                setTimeout(() => {
+                    loadingMessage.classList.remove('active');
+                    isRedirecting = false;
+                    
+                    // Mostrar mensagem de sucesso
+                    alert('Surpresa pra Lívia — com amor, Heitor\n\nA Galeria 3D foi aberta em uma nova aba!');
+                }, 1000);
+            }, 2000);
+        }
+        
+        // Criar efeito ripple
+        function createRipple(e) {
+            const button = e.currentTarget;
+            const circle = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            
+            const diameter = Math.max(rect.width, rect.height);
+            const radius = diameter / 2;
+            
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - rect.left - radius}px`;
+            circle.style.top = `${e.clientY - rect.top - radius}px`;
+            circle.classList.add('ripple');
+            
+            // Remover ripple existente
+            const ripple = button.getElementsByClassName('ripple')[0];
+            if (ripple) {
+                ripple.remove();
+            }
+            
+            button.appendChild(circle);
+        }
+        
+        // Criar partículas
+        function createParticles() {
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Tamanho aleatório
+                const size = 2 + Math.random() * 4;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Posição aleatória
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                particle.style.left = `${x}%`;
+                particle.style.top = `${y}%`;
+                
+                // Cor aleatória baseada na paleta
+                const colors = [
+                    'rgba(255, 183, 94, 0.8)',
+                    'rgba(255, 122, 122, 0.8)',
+                    'rgba(255, 94, 158, 0.8)',
+                    'rgba(106, 81, 255, 0.8)'
+                ];
+                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Animação
+                const duration = 1 + Math.random() * 2;
+                const delay = Math.random() * 1;
+                particle.style.animation = `sparkle ${duration}s ease-in-out infinite ${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+                
+                // Remover após algum tempo
+                setTimeout(() => {
+                    if (particle.parentNode) {
+                        particle.parentNode.removeChild(particle);
+                    }
+                }, 5000);
+            }
+        }
+        
+        // Criar confetes
+        function createConfetti() {
+            const confettiCount = 100;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Tamanho aleatório
+                const size = 5 + Math.random() * 10;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                
+                // Forma aleatória (quadrado ou círculo)
+                if (Math.random() > 0.5) {
+                    confetti.style.borderRadius = '50%';
+                }
+                
+                // Posição aleatória no topo
+                const x = Math.random() * 100;
+                confetti.style.left = `${x}%`;
+                confetti.style.top = `-20px`;
+                
+                // Cor aleatória baseada na paleta
+                const colors = [
+                    '#FFB75E', '#FF7A7A', '#FF5E9E', '#6A51FF',
+                    '#FFEB3B', '#4CAF50', '#2196F3', '#E91E63'
+                ];
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Animação
+                const duration = 2 + Math.random() * 3;
+                const delay = Math.random() * 1;
+                confetti.style.animation = `confettiFall ${duration}s linear ${delay}s forwards`;
+                
+                // Rotação aleatória
+                const rotation = Math.random() * 720;
+                confetti.style.transform = `rotate(${rotation}deg)`;
+                
+                particlesContainer.appendChild(confetti);
+                
+                // Remover após animação
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        confetti.parentNode.removeChild(confetti);
+                    }
+                }, (duration + delay) * 1000);
+            }
+        }
+        
+        // Animar ratinhos na abertura
+        function animateMiceOnOpen() {
+            mice.forEach((mouse, index) => {
+                // Resetar animação
+                mouse.style.animation = 'none';
+                
+                // Nova animação baseada na posição
+                setTimeout(() => {
+                    const x = parseFloat(mouse.style.left);
+                    
+                    if (x < 30) {
+                        // À esquerda: caminhar verticalmente
+                        mouse.style.animation = `walkVertical ${15 + Math.random() * 10}s linear infinite`;
+                    } else if (x > 70) {
+                        // À direita: caminhar horizontalmente
+                        mouse.style.animation = `walk ${20 + Math.random() * 15}s linear infinite`;
+                    } else {
+                        // Centro: flutuar
+                        mouse.style.animation = `float ${3 + Math.random() * 4}s ease-in-out infinite`;
+                    }
+                }, index * 100);
+            });
+        }
+        
+        // Verificar preferência por movimento reduzido
+        function checkReducedMotion() {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            
+            if (prefersReducedMotion) {
+                // Desativar animações
+                document.querySelectorAll('.mouse').forEach(mouse => {
+                    mouse.style.animation = 'none';
+                });
+                
+                // Alterar transições
+                document.querySelectorAll('*').forEach(el => {
+                    el.style.animationDuration = '0.01ms';
+                    el.style.animationIterationCount = '1';
+                    el.style.transitionDuration = '0.01ms';
+                });
+            }
+        }
+    </script>
+</body>
+</html>
